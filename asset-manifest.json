@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/v2-future-design-tool/static/css/main.e6c13ad2.css",
-    "main.js": "/v2-future-design-tool/static/js/main.d27bcca9.js",
+    "main.js": "/v2-future-design-tool/static/js/main.aa9b07fc.js",
     "static/js/453.42278644.chunk.js": "/v2-future-design-tool/static/js/453.42278644.chunk.js",
     "index.html": "/v2-future-design-tool/index.html",
     "main.e6c13ad2.css.map": "/v2-future-design-tool/static/css/main.e6c13ad2.css.map",
-    "main.d27bcca9.js.map": "/v2-future-design-tool/static/js/main.d27bcca9.js.map",
+    "main.aa9b07fc.js.map": "/v2-future-design-tool/static/js/main.aa9b07fc.js.map",
     "453.42278644.chunk.js.map": "/v2-future-design-tool/static/js/453.42278644.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.d27bcca9.js"
+    "static/js/main.aa9b07fc.js"
   ]
 }
