@@ -24,7 +24,7 @@ function App() {
   
   // GPT-4o parameters for Group A
   const [temperatureA, setTemperatureA] = useState(0.7);
-  const [maxTokensA, setMaxTokensA] = useState(2000);
+  const [maxTokensA, setMaxTokensA] = useState(10000);
   const [topPA, setTopPA] = useState(1.0);
 
   // Group B states
@@ -46,7 +46,7 @@ function App() {
   
   // GPT-4o parameters for Group B
   const [temperatureB, setTemperatureB] = useState(0.7);
-  const [maxTokensB, setMaxTokensB] = useState(2000);
+  const [maxTokensB, setMaxTokensB] = useState(10000);
   const [topPB, setTopPB] = useState(1.0);
   
   // Group C states (Silicon Sample)
@@ -63,7 +63,7 @@ function App() {
   
   // GPT-4o parameters for Group C
   const [temperatureC, setTemperatureC] = useState(0.7);
-  const [maxTokensC, setMaxTokensC] = useState(2000);
+  const [maxTokensC, setMaxTokensC] = useState(10000);
   const [topPC, setTopPC] = useState(1.0);
 
   // Common functions
@@ -349,13 +349,25 @@ Based on this user profile, generate a comprehensive design guide that would be 
 
 User Feedback: "${userFeedback}"
 
-Extract dimensions that the user actually mentions or cares about (such as "Space Preference", "Functionality Requirements", "Aesthetic Preference", "Technology Acceptance", etc.).
-Each dimension should:
-1. Be directly extracted from the user's feedback
-2. Be concise (2-3 words)
-3. Reflect actual aspects that the user is concerned about
+Extract dimensions that the user actually mentions or cares about.
+IMPORTANT: For EACH dimension, you MUST include a brief clarification in parentheses.
 
-Return ONLY the dimension phrases, one per line, without explanations, numbering, or additional text.`
+Format EXACTLY like this:
+Dimension Name (specific details to provide here)
+Another Dimension (what user should enter here)
+
+Examples:
+Color Preference (preferred colors and combinations)
+Work Style (remote/office/hybrid preferences)
+Space Requirements (square footage needed and layout preferences)
+
+Each dimension must:
+1. Be directly extracted from the user's feedback
+2. Be concise (2-3 words) for the dimension name
+3. Reflect actual aspects that the user is concerned about
+4. ALWAYS include parentheses with clear guidance on what information to provide
+
+Return ONLY the formatted dimensions, one per line.`
           }],
           temperature: temperatureB,
           max_tokens: maxTokensB,
